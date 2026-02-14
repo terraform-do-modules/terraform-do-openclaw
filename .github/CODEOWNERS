@@ -1,0 +1,17 @@
+# Code Owners
+
+# Global owners for everything
+* @anmolnagpal
+
+# Infrastructure code
+/infra/ @anmolnagpal
+
+# Scripts and automation
+/scripts/ @anmolnagpal
+
+# Documentation
+*.md @anmolnagpal
+/docs/ @anmolnagpal
+
+# GitHub workflows
+/.github/ @anmolnagpal

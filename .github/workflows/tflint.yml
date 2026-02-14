@@ -1,0 +1,12 @@
+name: tflint
+
+on:
+  pull_request:
+  push:
+    branches: [ master, main ]
+
+jobs:
+  tf-lint:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-lint.yml@master
+    secrets:
+      GITHUB: ${{ github.token }}

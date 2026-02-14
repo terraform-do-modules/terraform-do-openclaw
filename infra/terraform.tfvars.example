@@ -1,0 +1,10 @@
+name        = "openclaw-prod"
+environment = "prod"
+region      = "blr1"
+vpc_cidr    = "10.40.0.0/16"
+
+ssh_key = "REPLACE_WITH_DO_SSH_KEY_FINGERPRINT"
+
+droplet_size  = "s-2vcpu-4gb"
+droplet_image = "ubuntu-24-04-x64"
+enable_ipv6   = false

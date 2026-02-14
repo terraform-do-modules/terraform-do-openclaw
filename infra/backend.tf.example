@@ -1,0 +1,17 @@
+# Copy this to backend.tf and set values before first init in production.
+# Use remote state + locking equivalent for team safety.
+
+terraform {
+  backend "s3" {
+    # Example: DigitalOcean Spaces S3-compatible backend
+    # bucket                      = "openclaw-tfstate"
+    # key                         = "openclaw-do-platform/prod/terraform.tfstate"
+    # region                      = "us-east-1"
+    # endpoints                   = { s3 = "https://<region>.digitaloceanspaces.com" }
+    # skip_credentials_validation = true
+    # skip_requesting_account_id  = true
+    # skip_metadata_api_check     = true
+    # use_path_style              = false
+    # encrypt                     = true
+  }
+}

@@ -1,0 +1,32 @@
+name: terraform-ci
+
+on:
+  pull_request:
+  push:
+    branches: [ master, main ]
+
+jobs:
+  terraform-checks:
+    name: 🌎 Terraform Validate
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📦 Checkout
+        uses: actions/checkout@v4
+      
+      - name: 🛠️ Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.6.6'
+      
+      - name: 🧹 Terraform Format Check
+        working-directory: ./infra
+        run: terraform fmt -check -recursive
+      
+      - name: 🏗️ Terraform Init
+        working-directory: ./infra
+        run: terraform init -backend=false
+      
+      - name: 🔎 Terraform Validate
+        working-directory: ./infra
+        run: terraform validate
