@@ -9,7 +9,7 @@ module "vpc" {
 
 module "droplet" {
   source  = "terraform-do-modules/droplet/digitalocean"
-  version = "1.0.4"
+  version = "1.0.5"
 
   name         = var.name
   environment  = var.environment
