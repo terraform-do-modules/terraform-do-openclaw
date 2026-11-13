@@ -1,6 +1,6 @@
 module "vpc" {
   source      = "terraform-do-modules/vpc/digitalocean"
-  version     = "1.0.0"
+  version     = "1.0.7"
   name        = var.name
   environment = var.environment
   region      = var.region
