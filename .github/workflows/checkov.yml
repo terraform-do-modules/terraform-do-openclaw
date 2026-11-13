@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   checkov:
-    uses: clouddrove/github-shared-workflows/.github/workflows/security-checkov.yml@master
+    uses: clouddrove/github-shared-workflows/.github/workflows/security-checkov.yml@v2
     with:
       directory: 'infra'
       continue_on_error: 'true'
